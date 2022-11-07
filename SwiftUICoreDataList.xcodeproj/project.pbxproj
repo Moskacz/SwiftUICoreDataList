@@ -13,6 +13,8 @@
 		35974DEA291854EE0049ABF2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35974DE9291854EE0049ABF2 /* Preview Assets.xcassets */; };
 		35974DEC291854EE0049ABF2 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35974DEB291854EE0049ABF2 /* Persistence.swift */; };
 		35974DEF291854EE0049ABF2 /* SwiftUICoreDataList.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 35974DED291854EE0049ABF2 /* SwiftUICoreDataList.xcdatamodeld */; };
+		35E0BFD5291973CC003D16C0 /* Transaction+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35E0BFD3291973CC003D16C0 /* Transaction+CoreDataClass.swift */; };
+		35E0BFD6291973CC003D16C0 /* Transaction+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35E0BFD4291973CC003D16C0 /* Transaction+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +25,8 @@
 		35974DE9291854EE0049ABF2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		35974DEB291854EE0049ABF2 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		35974DEE291854EE0049ABF2 /* SwiftUICoreDataList.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SwiftUICoreDataList.xcdatamodel; sourceTree = "<group>"; };
+		35E0BFD3291973CC003D16C0 /* Transaction+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Transaction+CoreDataClass.swift"; sourceTree = "<group>"; };
+		35E0BFD4291973CC003D16C0 /* Transaction+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Transaction+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +59,8 @@
 		35974DE1291854EC0049ABF2 /* SwiftUICoreDataList */ = {
 			isa = PBXGroup;
 			children = (
+				35E0BFD3291973CC003D16C0 /* Transaction+CoreDataClass.swift */,
+				35E0BFD4291973CC003D16C0 /* Transaction+CoreDataProperties.swift */,
 				35974DE2291854EC0049ABF2 /* SwiftUICoreDataListApp.swift */,
 				35974DE4291854EC0049ABF2 /* ContentView.swift */,
 				35974DE6291854EE0049ABF2 /* Assets.xcassets */,
@@ -144,6 +150,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				35974DEF291854EE0049ABF2 /* SwiftUICoreDataList.xcdatamodeld in Sources */,
+				35E0BFD5291973CC003D16C0 /* Transaction+CoreDataClass.swift in Sources */,
+				35E0BFD6291973CC003D16C0 /* Transaction+CoreDataProperties.swift in Sources */,
 				35974DEC291854EE0049ABF2 /* Persistence.swift in Sources */,
 				35974DE5291854EC0049ABF2 /* ContentView.swift in Sources */,
 				35974DE3291854EC0049ABF2 /* SwiftUICoreDataListApp.swift in Sources */,

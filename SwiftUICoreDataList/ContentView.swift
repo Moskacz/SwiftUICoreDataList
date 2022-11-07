@@ -12,7 +12,7 @@ struct ContentView: View {
     @Environment(\.managedObjectContext) private var viewContext
 
     @FetchRequest(
-        sortDescriptors: [NSSortDescriptor(keyPath: \Transaction.cd_timestamp, ascending: true)],
+        sortDescriptors: [Transaction.timestampSortDescriptor],
         animation: .default)
     private var transactions: FetchedResults<Transaction>
 
@@ -21,9 +21,9 @@ struct ContentView: View {
             List {
                 ForEach(transactions) { transaction in
                     NavigationLink {
-                        Text("Item at \(transaction.cd_timestamp!, formatter: itemFormatter)")
+                        Text("Item at \(transaction.timestamp, formatter: itemFormatter)")
                     } label: {
-                        Text(transaction.cd_timestamp!, formatter: itemFormatter)
+                        Text(transaction.timestamp, formatter: itemFormatter)
                     }
                 }
                 .onDelete(perform: deleteItems)
@@ -44,8 +44,12 @@ struct ContentView: View {
 
     private func addItem() {
         withAnimation {
-            let newItem = Transaction(context: viewContext)
-            newItem.cd_timestamp = Date()
+            Transaction.insert(into: viewContext,
+                               identifier: UUID(),
+                               title: "test",
+                               category: "test2",
+                               timestamp: Date(),
+                               amount: Decimal(0))
 
             do {
                 try viewContext.save()

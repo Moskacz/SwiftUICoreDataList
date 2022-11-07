@@ -15,21 +15,19 @@ struct ContentView: View {
         sortDescriptors: [Transaction.timestampSortDescriptor],
         animation: .default)
     private var transactions: FetchedResults<Transaction>
+    
+    @State
+    private var navigationPath: [Transaction] = []
 
     var body: some View {
-        NavigationView {
-            List {
-                ForEach(transactions) { transaction in
-                    NavigationLink {
-                        TransactionView(title: transaction.title,
-                                        category: transaction.category,
-                                        timestamp: itemFormatter.string(from: transaction.timestamp))
-                    } label: {
-                        Text(transaction.timestamp, formatter: itemFormatter)
-                    }
-                }
-                .onDelete(perform: deleteItems)
-
+        NavigationStack(path: $navigationPath) {
+            List(transactions) { transaction in
+                NavigationLink("Transaction", value: transaction)
+            }
+            .navigationDestination(for: Transaction.self) { transaction in
+                TransactionView(title: transaction.title,
+                                category: transaction.category,
+                                timestamp: itemFormatter.string(from: transaction.timestamp))
             }
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
@@ -41,8 +39,8 @@ struct ContentView: View {
                     }
                 }
             }
-            Text("Select an item")
         }
+        
     }
 
     private func addItem() {

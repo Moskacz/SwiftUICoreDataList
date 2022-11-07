@@ -21,12 +21,15 @@ struct ContentView: View {
             List {
                 ForEach(transactions) { transaction in
                     NavigationLink {
-                        Text("Item at \(transaction.timestamp, formatter: itemFormatter)")
+                        TransactionView(title: transaction.title,
+                                        category: transaction.category,
+                                        timestamp: itemFormatter.string(from: transaction.timestamp))
                     } label: {
                         Text(transaction.timestamp, formatter: itemFormatter)
                     }
                 }
                 .onDelete(perform: deleteItems)
+
             }
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {

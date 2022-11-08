@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		35934776291ACF870029426B /* NewTransactionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35934775291ACF870029426B /* NewTransactionView.swift */; };
 		35974DE3291854EC0049ABF2 /* SwiftUICoreDataListApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35974DE2291854EC0049ABF2 /* SwiftUICoreDataListApp.swift */; };
 		35974DE5291854EC0049ABF2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35974DE4291854EC0049ABF2 /* ContentView.swift */; };
 		35974DE7291854EE0049ABF2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35974DE6291854EE0049ABF2 /* Assets.xcassets */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		35934775291ACF870029426B /* NewTransactionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTransactionView.swift; sourceTree = "<group>"; };
 		35974DDF291854EC0049ABF2 /* SwiftUICoreDataList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUICoreDataList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35974DE2291854EC0049ABF2 /* SwiftUICoreDataListApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUICoreDataListApp.swift; sourceTree = "<group>"; };
 		35974DE4291854EC0049ABF2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -70,6 +72,7 @@
 				35974DED291854EE0049ABF2 /* SwiftUICoreDataList.xcdatamodeld */,
 				35974DE8291854EE0049ABF2 /* Preview Content */,
 				35C22CF02919781900C21737 /* TransactionView.swift */,
+				35934775291ACF870029426B /* NewTransactionView.swift */,
 			);
 			path = SwiftUICoreDataList;
 			sourceTree = "<group>";
@@ -158,6 +161,7 @@
 				35974DEC291854EE0049ABF2 /* Persistence.swift in Sources */,
 				35974DE5291854EC0049ABF2 /* ContentView.swift in Sources */,
 				35C22CF12919781900C21737 /* TransactionView.swift in Sources */,
+				35934776291ACF870029426B /* NewTransactionView.swift in Sources */,
 				35974DE3291854EC0049ABF2 /* SwiftUICoreDataListApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -18,6 +18,9 @@ struct ContentView: View {
     
     @State
     private var navigationPath: [Transaction] = []
+    
+    @State
+    private var addTransactionSheedPresented = false
 
     var body: some View {
         NavigationStack(path: $navigationPath) {
@@ -34,10 +37,15 @@ struct ContentView: View {
                     EditButton()
                 }
                 ToolbarItem {
-                    Button(action: addItem) {
+                    Button(action: { addTransactionSheedPresented = true }) {
                         Label("Add Item", systemImage: "plus")
                     }
                 }
+            }
+        }
+        .sheet(isPresented: $addTransactionSheedPresented) {
+            VStack {
+                Text("test")
             }
         }
         

@@ -20,7 +20,7 @@ struct ContentView: View {
     private var navigationPath: [Transaction] = []
     
     @State
-    private var addTransactionSheedPresented = false
+    private var addTransactionSheetPresented = false
 
     var body: some View {
         NavigationStack(path: $navigationPath) {
@@ -37,39 +37,17 @@ struct ContentView: View {
                     EditButton()
                 }
                 ToolbarItem {
-                    Button(action: { addTransactionSheedPresented = true }) {
+                    Button(action: { addTransactionSheetPresented = true }) {
                         Label("Add Item", systemImage: "plus")
                     }
                 }
             }
         }
-        .sheet(isPresented: $addTransactionSheedPresented) {
-            VStack {
-                Text("test")
-            }
-        }
-        
-    }
-
-    private func addItem() {
-        withAnimation {
-            Transaction.insert(into: viewContext,
-                               identifier: UUID(),
-                               title: "test",
-                               category: "test2",
-                               timestamp: Date(),
-                               amount: Decimal(0))
-
-            do {
-                try viewContext.save()
-            } catch {
-                // Replace this implementation with code to handle the error appropriately.
-                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-                let nsError = error as NSError
-                fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
-            }
+        .sheet(isPresented: $addTransactionSheetPresented) {
+           NewTransactionView(sheetPresented: $addTransactionSheetPresented)
         }
     }
+
 
     private func deleteItems(offsets: IndexSet) {
         withAnimation {

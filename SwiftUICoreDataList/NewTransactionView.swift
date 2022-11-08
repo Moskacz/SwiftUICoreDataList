@@ -9,6 +9,9 @@ import SwiftUI
 
 struct NewTransactionView: View {
     
+    @Binding
+    var sheetPresented: Bool
+    
     @State
     private var title: String = ""
     
@@ -32,7 +35,9 @@ struct NewTransactionView: View {
                 Text("Amount")
                 TextField("Tap..", text: $amount)
             }
-            Button(action: {}, label: {
+            Button(action: {
+                sheetPresented = false
+            }, label: {
                 Text("Save")
             })
             .padding(EdgeInsets(top: 5, leading: 5, bottom: 5, trailing: 5))
@@ -45,8 +50,4 @@ struct NewTransactionView: View {
     }
 }
 
-struct NewTransactionView_Previews: PreviewProvider {
-    static var previews: some View {
-        NewTransactionView()
-    }
-}
+
